@@ -44,7 +44,7 @@ $(document).ready(function () {
 
         var distance = ["5","10","15","20","50"];
         var priceRange = ["$1-$10","$11-$20","$21-$30","$31-40"];
-        var 
+        var city = [];
         var customSearch =[];
 
         function displayResults (){
