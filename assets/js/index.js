@@ -2,40 +2,59 @@ $(document).ready(function () {
     // CODE FOR LOGIC IN HOME PAGE HERE
 
     // # On Page Load
+    // Pulling zipcode from form info on We Pick button.
+    // uses zipcode and basic food search to search all food locations around said zip code.
 
-        // * Set up search using a form's on submit event
+
+    $('#wePick').click(pullzip)
+
+    function pullzip() {
+        var zipcode = $('#Zip').val().trim()
+        food = "food"
+        console.log(zipcode)
+        if (zipcode === "") {
+            alert("Please enter a valid zipcode.")
+        }
+        else {
+            $.ajax({
+                url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + food + "&location=" + zipcode,
+                method: "GET",
+                dataType: 'json',
+                headers: {
+                    Authorization: "Bearer QuLOrfxmj5qnOvQFcqHJwI1gcHWh2JeikTN36-sVZJRT3lqDzUC02pSCNgii8pJX0nRncsVZ1shO7hZvGtlEvoj4E8VIqA_9IQcR-vVWGXuKT2Q6153rE06MQAYVXXYx",
+                }
+            }).then(function (result) {
+                console.log(result);
+            })
+        }
+    }
+
+    $('#youDecide').click(pullOptions)
+
+    //Pulling options from modal that user inputs. Take multiple inputs and places them in URL.
+    function pullOptions(event) {
+        event.preventDefault()
+        var zipcode = $('#Zip').val().trim()
+        var food = $('#food').val().trim()
+        console.log(zipcode)
+
         $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=by-chloe&location=boston",
+            url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + food + "&location=" + zipcode,
             method: "GET",
             dataType: 'json',
             headers: {
-                Authorization: "Bearer ZVex6dzsWTaMZqG2tz0veaxVfFmePcq5QWtXvzJqTQp53M11_NN3lueZn5gQYNDWlSJkzUweOJMTIRwyyYs4UPsHhJV3HhJB8m1WurHojHMgfy4MxTKz1zZLzazlXHYx",
+                Authorization: "Bearer QuLOrfxmj5qnOvQFcqHJwI1gcHWh2JeikTN36-sVZJRT3lqDzUC02pSCNgii8pJX0nRncsVZ1shO7hZvGtlEvoj4E8VIqA_9IQcR-vVWGXuKT2Q6153rE06MQAYVXXYx",
             }
         }).then(function (result) {
             console.log(result);
-        }) 
+        })
 
-    // # On Submit
 
-        // * Prevent default actions (don't want page reloading)
 
-        // * get band search term from input box (store in variable)
 
-        // * search for attraction using this url: 
-        // ```javascript
-        // var queryUrl = "https://app.ticketmaster.com/discovery/v2/attractions.json?keyword=" + searchTerm + "&size=1&classificationId=KZFzniwnSyZfZ7v7nJ&apikey=MY_API_KEY"
-        // ```
-        // this searches for music by the keyword only pulling back 1 result
 
-        // * After getting an attraction Id from the previous ajax call
 
-        //     * Search for events with attraction id using this url:
-        //     ```javascript
-        //     var gigUrl = "https://app.ticketmaster.com/discovery/v2/events.json?attractionId=" + attractionId + "&size=10&classificationId=KZFzniwnSyZfZ7v7nJ&apikey=52A3SfDlelkwe86BqMkd4uTsjXEFhoIi"
-        //     ```
-        //     * After receiving results from the gig search
 
-        //         * build a list of cards about each event containing pictures, location info, anything about event
+    }
 
-        //         * build links to view more: /pages/show.html?eventid=eventid from search (this is link to our own other page)
 });
