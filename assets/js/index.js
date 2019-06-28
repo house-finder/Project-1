@@ -4,6 +4,16 @@ $(document).ready(function () {
     // # On Page Load
 
         // * Set up search using a form's on submit event
+        $.ajax({
+            url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=by-chloe&location=boston",
+            method: "GET",
+            dataType: 'json',
+            headers: {
+                Authorization: "Bearer ZVex6dzsWTaMZqG2tz0veaxVfFmePcq5QWtXvzJqTQp53M11_NN3lueZn5gQYNDWlSJkzUweOJMTIRwyyYs4UPsHhJV3HhJB8m1WurHojHMgfy4MxTKz1zZLzazlXHYx",
+            }
+        }).then(function (result) {
+            console.log(result);
+        }) 
 
     // # On Submit
 
