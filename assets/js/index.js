@@ -56,6 +56,12 @@ $(document).ready(function () {
             $(this).attr(city);
         }
 
+        $("#search-bar").on("click", function (event) {
+            event.preventDefault();
+            var topic = $("#user-input").val().trim();
+            customSearch.push(topic);
+            displayResults();
+        });
 
 
 
