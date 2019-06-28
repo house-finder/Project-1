@@ -41,15 +41,16 @@ $(document).ready(function () {
 
         var wePick = [];
 
-
         var distance = ["5","10","15","20","50"];
         var priceRange = ["$1-$10","$11-$20","$21-$30","$31-40"];
         var city = [];
+        var zipcode = [];
         var customSearch =[];
 
         function displayResults (){
-            $(this).attr(distance)
-            $(this).attr(priceRange)
+            $(this).attr(distance);
+            $(this).attr(priceRange);
+            $(this).attr(zipcode);
         }
 
 
