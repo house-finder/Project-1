@@ -28,4 +28,25 @@ $(document).ready(function () {
         //         * build a list of cards about each event containing pictures, location info, anything about event
 
         //         * build links to view more: /pages/show.html?eventid=eventid from search (this is link to our own other page)
+
+        var wePick = [];
+
+
+        var distance = ["5","10","15","20","50"];
+        var priceRange = ["$1-$10","$11-$20","$21-$30","$31-40"];
+        var 
+        var customSearch =[];
+
+        function displayResults (){
+            $(this).attr(distance)
+            $(this).attr(priceRange)
+        }
+
+
+
+
+
+    $(document).on("click",displayResults);
+
+
 });
