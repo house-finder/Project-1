@@ -17,7 +17,7 @@ $(document).ready(function () {
         }
         else {
             $.ajax({
-                url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + food + "&location=" + zipcode,
+                url: "wwhttps://api.yelp.com/v3/businesses/search?term=" + food + "&location=" + zipcode,
                 method: "GET",
                 dataType: 'json',
                 headers: {
