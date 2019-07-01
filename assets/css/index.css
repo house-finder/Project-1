@@ -1,15 +1,14 @@
  /* CSS FOR HOME PAGE HERE: */
  body {
-     background-color: skyblue;
+     background-color: #D6D6D6;
  }
  #title {
-     background-color: teal;
+     background-color: rgb(53, 85, 85);
      font-size: 72px;
      margin: auto;
      margin-top: 10px;
      margin-bottom: 10px;
-     width: 50%;
-     border: 3px solid rgb(0, 0, 0);
+     width: 100%;
      padding: 10px;
      text-align: center;
  }
@@ -26,14 +25,11 @@
  }
  #inputBar {
      text-align: center;
-     float: left;
  }
  .input-group {
     width: 50%;
     margin: 10px 15% 10px 15%;
     float: left;
- }
- .dropdown {
  }
  .pick {
      height: 100px;
