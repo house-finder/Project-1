@@ -17,6 +17,18 @@
     <!-- FOR PERSONAL CSS: -->
     <!-- Not minified CSS -->
     <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,9 +73,8 @@
 
     <!-- ~~~~~~~~~~TODO: Temporary area for holding cards~~~~~~~~~~~~ -->
     <div class="d-flex flex-grow flex-direction-column flex-wrap justify-content-around bg-dark" id="cardsBody">
-        
-    </div>
 
+    </div>
 
     <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
 
@@ -80,6 +91,12 @@
     <!-- FOR PERSONAL JS: -->
     <!-- Not minified JavaScript -->
     <script src="assets/js/index.js"></script>
+    
+    <div id="map"></div>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8gHovWgTSvaTup3gu9XGSa-4kyNws6uI&callback=initMap"
+        type="text/javascript"></script>
 </body>
 
 </html>

@@ -116,7 +116,7 @@ $(document).ready(function () {
         });
         infoWindow = new google.maps.InfoWindow;
 
-        // Try HTML5 geolocation.
+
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function (position) {
                 var pos = {
@@ -140,9 +140,9 @@ $(document).ready(function () {
 
                 queryPlaces("restaurant").then(function (response) {
                     console.log(response);
-                    for(var i = 0; i < response.results.length; i++) {
+                    for (var i = 0; i < response.results.length; i++) {
                         var loc = response.results[i].geometry.location;
-                        var marker = new google.maps.Marker({position: loc, map: map});
+                        var marker = new google.maps.Marker({ position: loc, map: map });
                     }
                 })
                 map.setCenter(pos);
@@ -162,5 +162,7 @@ $(document).ready(function () {
             'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
     }
+
+    initMap();
 
 });
