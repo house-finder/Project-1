@@ -16,6 +16,7 @@ $(document).ready(function () {
             alert("Please enter a valid zipcode.")
         }
         else {
+            $('#cardsBody').html('')
             $.ajax({
                 url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + food + "&location=" + zipcode,
                 method: "GET",
