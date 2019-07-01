@@ -29,10 +29,11 @@
  }
  .input-group {
     width: 50%;
-    margin: 0 auto;
+    margin: 10px 15% 10px 15%;
+    float: left;
  }
  .dropdown {
-    overflow: auto;
+     float: right;
  }
  .pick {
      height: 100px;
