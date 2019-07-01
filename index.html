@@ -9,11 +9,11 @@
 
     <!-- BootStrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- FOR MATERIALIZE CSS: -->
     <!-- Compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-    
+
     <!-- FOR PERSONAL CSS: -->
     <!-- Not minified CSS -->
     <link rel="stylesheet" href="assets/css/index.css">
@@ -23,40 +23,50 @@
     <!-- Adding Page title and directions for new user -->
     <h1 id="title">Feed Me!</h1>
     <div id="userDirections">Not sure what do eat? Let us help you with some basic information or let us decide for
-            you.</div>
+        you.</div>
     <!-- ~~~~~~~~~~~~TODO: Location input with Zip/City~~~~~~~~~~~~~~ -->
     <div id=inputBar>
-    <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">Location: City or Zip</span>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Location: City or Zip</span>
+            </div>
+            <input id="Zip" type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-sm">
         </div>
-        <input id="Zip" type="text" class="form-control" aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-sm">
-        </div>
-    <!-- ~~~~~~~~~~END TODO: Location input with Zip/City~~~~~~~~~~~~ -->
+        <!-- ~~~~~~~~~~END TODO: Location input with Zip/City~~~~~~~~~~~~ -->
 
-    <!-- ~~~~~~~~~~~~TODO: Distance Dropdown~~~~~~~~~~~~~~ -->
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Distance (Miles)
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start"
-            style="position: absolute; transform: translate3d(5px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-            <a class="dropdown-item" href="#">5</a>
-            <a class="dropdown-item" href="#">10</a>
-            <a class="dropdown-item" href="#">15</a>
-            <a class="dropdown-item" href="#">20</a>
-            <a class="dropdown-item" href="#">25+</a>
+        <!-- ~~~~~~~~~~~~TODO: Distance Dropdown~~~~~~~~~~~~~~ -->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Distance (Miles)
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start"
+                style="position: absolute; transform: translate3d(5px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                <a class="dropdown-item" href="#">5</a>
+                <a class="dropdown-item" href="#">10</a>
+                <a class="dropdown-item" href="#">15</a>
+                <a class="dropdown-item" href="#">20</a>
+                <a class="dropdown-item" href="#">25+</a>
+            </div>
         </div>
     </div>
-</div>
     <!-- ~~~~~~~~~~END TODO: Distance Dropdown~~~~~~~~~~~~ -->
 
     <!-- ~~~~~~~~~~~~TODO: We Decide/You Decide Button~~~~~~~~~~~~~~ -->
     <button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button>
     <button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button>
     <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
+
+
+    <!-- ~~~~~~~~~~TODO: Temporary area for holding cards~~~~~~~~~~~~ -->
+    <div class="d-flex flex-grow flex-direction-column flex-wrap justify-content-around bg-dark" id="cardsBody">
+        
+    </div>
+
+
+    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
+
 
     <!-- FOR JQUERY: -->
     <!-- Compiled and minified JavaScript -->
@@ -66,7 +76,7 @@
     <!-- FOR MATERIALIZE CSS: -->
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
     <!-- FOR PERSONAL JS: -->
     <!-- Not minified JavaScript -->
     <script src="assets/js/index.js"></script>
