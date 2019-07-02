@@ -1,15 +1,17 @@
  /* CSS FOR HOME PAGE HERE: */
+ /* .nav-wrapper {
+     background-color: gray;
+ } */
  body {
-     background-color: skyblue;
+     background-color: #D6D6D6;
  }
  #title {
-     background-color: teal;
+     background-color: rgb(53, 85, 85);
      font-size: 72px;
      margin: auto;
      margin-top: 10px;
      margin-bottom: 10px;
-     width: 50%;
-     border: 3px solid rgb(0, 0, 0);
+     width: 100%;
      padding: 10px;
      text-align: center;
  }
@@ -29,10 +31,7 @@
  }
  .input-group {
     width: 50%;
-    margin: 0 auto;
- }
- .dropdown {
-    overflow: auto;
+    margin: auto;
  }
  .pick {
      height: 100px;
@@ -41,8 +40,27 @@
      text-align: center;
  }
 
+ #locationContainer {
+     width: 75%;
+     height: 150px;
+     margin: auto;
+ }
+ .row {
+     text-align: center;
+ }
+ .btn-primary {
+    background-color: green;
+    margin-left: 50%;
+ }
+ .btn-success {
+    background-color: blue;
+    margin-left: -50%;
+ }
+=======
+
  <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2-->
     .dropdown1 {
      left: auto;
      right: 0;
    }
+
