@@ -39,6 +39,7 @@
      margin: 25px 100px;
      text-align: center;
  }
+
  #locationContainer {
      width: 75%;
      height: 150px;
@@ -55,3 +56,11 @@
     background-color: blue;
     margin-left: -50%;
  }
+=======
+
+ <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2-->
+    .dropdown1 {
+     left: auto;
+     right: 0;
+   }
+
