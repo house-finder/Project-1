@@ -65,11 +65,11 @@
     margin-left: -50%;
     color: black;
  }
- .nav-wrapper {
-     background-color: #808285;
-     padding-left: 25px;
-     color: black;
- }
-* {
-    font-family: 'Roboto', sans-serif;
-} 
+>>>>>>>>> Temporary merge branch 2
+
+ <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2-->
+    .dropdown1 {
+     left: auto;
+     right: 0;
+   }
+
