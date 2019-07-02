@@ -119,7 +119,6 @@ $(document).ready(function () {
                 var cardMain = $('<div>')
                 cardMain.attr('class','row w-25 mr-5 mt-5')
                 $('#cardsBody').append(cardMain)
-<<<<<<< HEAD
 
                 var innerMain = $('<div>')
                 innerMain.attr('class', 'col s12 m7')

@@ -29,13 +29,13 @@
 
 <body>
     <!-- Adding Page title and directions for new user -->
-    
+
     <!-- ~~~~~~~~~~END TODO: Adding Page title and directions for new user~~~~~~~~~~~~ -->
 
     <!--TODO: NavBar Materialize-->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" class="brand-logo">Feed Me!</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="sass.html">Sass</a></li>
                 <li><a href="badges.html">Components</a></li>
@@ -47,36 +47,62 @@
     <!--END TODO: NavBar-->
 
     <!--Dropdown-->
-    
-  <!-- Dropdown BS Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
 
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-  </ul>
-
- <!-- END TODO: dropdown-->
+    <!-- END TODO: dropdown-->
 
     <!-- ~~~~~~~~~~~~TODO: Location input with Zip/City~~~~~~~~~~~~~~ -->
-    <div id=locationContainer>
-    <div id=inputBar>
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Location: City or Zip</span>
-            </div>
-            <input id="Zip" type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-sm">
+    <div class="row">
+        <div class="col s3"></div>
+        <div id=zipBar class="col s3">Location: Zip
+                <input id="Zip" type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm"></div>
+        <div class="col s3">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
+                <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!">5</a></li>
+                        <li><a href="#!">10</a></li>
+                        <li><a href="#!">15</a></li>
+                        <li><a href="#!">20</a></li>
+                        <li><a href="#!">25+</a></li>
+                    </ul>
         </div>
-        <!-- ~~~~~~~~~~END TODO: Location input with Zip/City~~~~~~~~~~~~ -->
+        <div class="col s3"></div>
+    </div>
 
-        <!-- ~~~~~~~~~~~~TODO: Distance Dropdown~~~~~~~~~~~~~~ -->
-        <!-- <div class="dropdown">
+    <body>
+        <div class="container">
+            <!-- Page Content goes here -->
+        </div>
+    </body>
+    <!-- <div id=locationContainer>
+        <div id=inputBar>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Location: City or Zip</span>
+                </div>
+                <div>
+                    Location: Zip
+                    <input id="Zip" type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-sm">
+                </div>
+                
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
+
+                
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#!">5</a></li>
+                    <li><a href="#!">10</a></li>
+                    <li><a href="#!">15</a></li>
+                    <li><a href="#!">20</a></li>
+                    <li><a href="#!">25+</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <!-- ~~~~~~~~~~END TODO: Location input with Zip/City~~~~~~~~~~~~ -->
+
+    <!-- ~~~~~~~~~~~~TODO: Distance Dropdown~~~~~~~~~~~~~~ -->
+    <!-- <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Distance (Miles)
@@ -94,9 +120,14 @@
     <!-- ~~~~~~~~~~END TODO: Distance Dropdown~~~~~~~~~~~~ -->
 
     <!-- ~~~~~~~~~~~~TODO: We Decide/You Decide Button~~~~~~~~~~~~~~ -->
-    <button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button>
-    <button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button>
-    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
+    <div class="row">
+        <div class="col m6"><button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button></div>
+        <div class="col m6"><button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button>
+        </div>
+    </div>
+    <!-- <button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button>
+    <button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button> -->
+    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~
 
 
     <!-- ~~~~~~~~~~TODO: Temporary area for holding cards~~~~~~~~~~~~ -->
@@ -109,8 +140,10 @@
 
     <!-- FOR JQUERY: -->
     <!-- Compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="assets/js/dropdown.js"></script>
+
 
     <!-- FOR MATERIALIZE CSS: -->
     <!-- Compiled and minified JavaScript -->
