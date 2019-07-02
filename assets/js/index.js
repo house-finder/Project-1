@@ -4,7 +4,11 @@ $(document).ready(function () {
     // # On Page Load
     // Pulling zipcode from form info on We Pick button.
     // uses zipcode and basic food search to search all food locations around said zip code.
-
+    var distance = "16093"
+    $("body").on("click", ".distance", function (event) {
+        distance = $(this).attr('val');
+        alert(distance);
+    });
 
     $('#wePick').click(pullzip)
 
@@ -18,7 +22,7 @@ $(document).ready(function () {
         else {
             $('#cardsBody').html('')
             $.ajax({
-                url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=5&term=" + food + "&location=" + zipcode,
+                url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=20&term=food&location=" + zipcode + "&radius=" + distance,
                 method: "GET",
                 dataType: 'json',
                 headers: {
@@ -26,37 +30,32 @@ $(document).ready(function () {
                 }
             }).then(function (result) {
                 //Looping through each buisness. Currently set to 20
-            for (i=0; i<result.businesses.length; i++) {
+                console.log(result)
+                var i = 0
+                i = Math.floor(Math.random() * result.businesses.length)
+                console.log(distance)
                 //able to change image sizes. Kinda useless actually since it makes the image look very blurry. May remove.
-               var img = $('<div>')
-               img.text(result.businesses[i].image_url)
-               img.text(function(){
-                return $(this).text().replace("o.jpg", "l.jpg");
-               })
 
-               imgMedium = img.text()
-                
-                console.log(result);
                 //making card with buisness info and pictures.
                 var cardMain = $('<div>')
-                cardMain.attr('class','row w-25 mr-5 mt-5')
+                cardMain.attr('class', 'row w-25 mr-5 mt-5')
                 $('#cardsBody').append(cardMain)
 
                 var innerMain = $('<div>')
-                innerMain.attr('class', 'col s12 m7')
+                innerMain.attr('class', 'col s12')
                 $(cardMain).append(innerMain)
 
-                var actualCard= $('<div>')
+                var actualCard = $('<div>')
                 actualCard.attr('class', 'card')
                 $(innerMain).append(actualCard)
 
-                var imageDiv= $('<div>')
+                var imageDiv = $('<div>')
                 imageDiv.attr('class', 'card-image')
                 $(actualCard).append(imageDiv)
 
                 var picture = $('<img>')
                 picture.attr('class', 'w-100 h-100')
-                picture.attr('src', imgMedium)
+                picture.attr('src', result.businesses[i].image_url)
                 $(imageDiv).append(picture)
 
                 var title = $('<span>')
@@ -79,36 +78,15 @@ $(document).ready(function () {
                 var link = $('<button>')
                 link.attr('href', '/map.html')
                 link.text('Find on a map?')
-                link.attr('class','waves-effect waves-light btn')
+                link.attr('class', 'waves-effect waves-light btn')
                 $(cardAction).append(link)
-                
+
             }
-            })
+            )
         }
     }
 
-    $('#youDecide').click(pullOptions)
-
-    //Pulling options from modal that user inputs. Take multiple inputs and places them in URL.
-    function pullOptions(event) {
-        event.preventDefault()
-        var zipcode = $('#Zip').val().trim()
-        var food = $('#food').val().trim()
-        console.log(zipcode)
-
-        $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + food + "&location=" + zipcode,
-            method: "GET",
-            dataType: 'json',
-            headers: {
-                Authorization: "Bearer QuLOrfxmj5qnOvQFcqHJwI1gcHWh2JeikTN36-sVZJRT3lqDzUC02pSCNgii8pJX0nRncsVZ1shO7hZvGtlEvoj4E8VIqA_9IQcR-vVWGXuKT2Q6153rE06MQAYVXXYx",
-            }
-        }).then(function (result) {
-            console.log(result);
-        })
-    }
 
 
-    
 });
-    $('.dropdown-trigger').dropdown();
+$('.dropdown-trigger').dropdown();
