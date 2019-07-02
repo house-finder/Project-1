@@ -10,6 +10,14 @@ $(document).ready(function () {
         alert(distance);
     });
 
+    $("body").on("click", ".mapButton", function (event) {
+        var latitude = $(this).attr('val1');
+        var longitude = $(this).attr('val2');
+        localStorage.setItem("lat", latitude)
+        localStorage.setItem("long", longitude)
+        
+    });
+
     $('#wePick').click(pullzip)
 
     function pullzip() {
@@ -75,10 +83,12 @@ $(document).ready(function () {
                 cardAction.attr('class', 'card-action')
                 $(actualCard).append(cardAction)
 
-                var link = $('<button>')
+                var link = $('<a>')
                 link.attr('href', '/map.html')
                 link.text('Find on a map?')
-                link.attr('class', 'waves-effect waves-light btn')
+                link.attr('class', 'waves-effect waves-light btn mapButton')
+                link.attr('val1', result.businesses[i].coordinates.latitude)
+                link.attr('val2', result.businesses[i].coordinates.longitude)
                 $(cardAction).append(link)
 
             }

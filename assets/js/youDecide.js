@@ -17,12 +17,21 @@ $("body").on("click", ".price", function (event) {
     alert(price);
 });
 
+$("body").on("click", ".mapButton", function (event) {
+    var latitude = $(this).attr('val1');
+    var longitude = $(this).attr('val2');
+    localStorage.setItem("lat", latitude)
+    localStorage.setItem("long", longitude)
+    
+});
+
 
 
     $('#youDecide').click(pullzip)
 
     function pullzip() {
         var zipcode = $('#Zip').val().trim()
+        localStorage.setItem("zip", zipcode)
         food = "food"
         console.log(zipcode)
         if (zipcode === "") {
@@ -94,7 +103,9 @@ $("body").on("click", ".price", function (event) {
                 var link = $('<button>')
                 link.attr('href', '/map.html')
                 link.text('Find on a map?')
-                link.attr('class', 'waves-effect waves-light btn')
+                link.attr('class', 'waves-effect waves-light btn mapButton')
+                link.attr('val1', result.businesses[i].coordinates.latitude)
+                link.attr('val2', result.businesses[i].coordinates.longitude)
                 $(cardAction).append(link)
             }
             })

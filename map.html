@@ -27,15 +27,19 @@
 
     <script>
         var map, infoWindow;
+        var latitude = localStorage.getItem('lat')
+        var longitude = localStorage.getItem('long')
+        var latnum = parseFloat(latitude)
+        var longnum = parseFloat(longitude)
 
 // Initialize and add the map
 function initMap() {
 
   // The location of Uluru
-  var zipLat = {lat: -25.344, lng: 131.036};
+  var zipLat = {lat: latnum, lng: longnum};
   // The map, centered at Uluru
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: zipLat});
+      document.getElementById('map'), {zoom: 20, center: zipLat});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: zipLat, map: map});
 }
