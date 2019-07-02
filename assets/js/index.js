@@ -18,7 +18,7 @@ $(document).ready(function () {
         else {
             $('#cardsBody').html('')
             $.ajax({
-                url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + food + "&location=" + zipcode,
+                url: "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=5&term=" + food + "&location=" + zipcode,
                 method: "GET",
                 dataType: 'json',
                 headers: {
@@ -76,15 +76,16 @@ $(document).ready(function () {
                 cardAction.attr('class', 'card-action')
                 $(actualCard).append(cardAction)
 
-                var link = $('<a>')
+                var link = $('<button>')
                 link.attr('href', '/map.html')
-                link.text('Go to website?')
+                link.text('Find on a map?')
+                link.attr('class','waves-effect waves-light btn')
                 $(cardAction).append(link)
+                
             }
             })
         }
     }
-
 
     $('#youDecide').click(pullOptions)
 
@@ -110,60 +111,3 @@ $(document).ready(function () {
 
     
 });
-
-$('#mapstart').click(initMap)
-var map, infoWindow;
-function initMap() {
-    alert('pressed')
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 10
-    });
-    infoWindow = new google.maps.InfoWindow;
-
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            function queryPlaces(searchType) {
-                var queryString = $.param({
-                    key: "AIzaSyA8gHovWgTSvaTup3gu9XGSa-4kyNws6uI",
-                    query: searchType,
-                    fields: "name,geometry",
-                    location: pos.lat + "," + pos.lng
-                });
-                var queryUrl = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?" + queryString;
-                return $.ajax({
-                    method: "GET",
-                    url: queryUrl
-                });
-            }
-
-            queryPlaces("restaurant").then(function (response) {
-                console.log(response);
-                for(var i = 0; i < response.results.length; i++) {
-                    var loc = response.results[i].geometry.location;
-                    var marker = new google.maps.Marker({position: loc, map: map});
-                }
-            })
-            map.setCenter(pos);
-        }, function () {
-            handleLocationError(true, infoWindow, map.getCenter());
-        });
-    } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-    }
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-}
