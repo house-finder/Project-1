@@ -3,7 +3,7 @@
      background-color: gray;
  } */
  body {
-     background-color: #D6D6D6;
+     background-color: #e2e1dd;
  }
  #title {
      background-color: rgb(53, 85, 85);
@@ -40,6 +40,12 @@
      text-align: center;
  }
 
+ <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2-->
+    .dropdown1 {
+     left: auto;
+     right: 0;
+   }
+
  #locationContainer {
      width: 75%;
      height: 150px;
@@ -47,18 +53,21 @@
  }
  .row {
      text-align: center;
+     padding-top: 25px;
  }
  .btn-primary {
-    background-color: green;
+    background-color: yellow;
     margin-left: 50%;
+    color: black;
  }
  .btn-success {
-    background-color: blue;
+    background-color:rgb(202, 58, 58);
     margin-left: -50%;
+    color: black;
  }
 
 
- <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2-->
+ /* <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2--> */
     .dropdown1 {
      left: auto;
      right: 0;
