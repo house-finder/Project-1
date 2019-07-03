@@ -9,12 +9,15 @@ var price = 1
 var distance = '16093'
 $("body").on("click", ".distance", function (event) {
     distance = $(this).attr('val');
-    alert(distance);
+    distancetext= $(this).attr('val2')
+    $('#milesP').text(distancetext)
 });
 
 $("body").on("click", ".price", function (event) {
     price = $(this).attr('val');
-    alert(price);
+    pricetext= $(this).attr('val2')
+    $('#moneyP').text(pricetext)
+
 });
 
 $("body").on("click", ".mapButton", function (event) {
@@ -35,7 +38,6 @@ $("body").on("click", ".mapButton", function (event) {
         food = "food"
         console.log(zipcode)
         if (zipcode === "") {
-            alert("Please enter a valid zipcode.")
         }
         else {
             $('#cardsBody').html('')
@@ -100,7 +102,7 @@ $("body").on("click", ".mapButton", function (event) {
                 cardAction.attr('class', 'card-action')
                 $(actualCard).append(cardAction)
 
-                var link = $('<button>')
+                var link = $('<a>')
                 link.attr('href', '/map.html')
                 link.text('Find on a map?')
                 link.attr('class', 'waves-effect waves-light btn mapButton')
