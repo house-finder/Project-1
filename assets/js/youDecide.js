@@ -103,7 +103,7 @@ $("body").on("click", ".mapButton", function (event) {
                 $(actualCard).append(cardAction)
 
                 var link = $('<a>')
-                link.attr('href', '/map.html')
+                link.attr('href', 'map.html')
                 link.text('Find on a map?')
                 link.attr('class', 'waves-effect waves-light btn mapButton')
                 link.attr('val1', result.businesses[i].coordinates.latitude)
