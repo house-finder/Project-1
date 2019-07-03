@@ -5,41 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <title>FeedMe- You Decide>
 
-    <!--Materialize-Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <!--Materialize-Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feed Me- You Decide</title>
 
-    <title>Feed Me</title>
+  <!--Materialize-Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!--Materialize-Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Font Awesome Icon Library for the Rating stars -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!--Materialize-->
+  <title>Feed Me</title>
+
+  <!-- Font Awesome Icon Library for the Rating stars -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Materialize-->
 
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
+  <!-- Compiled and minified JavaScript -->
 
- 
-    </head>
+
+</head>
 
 <body>
 
   <!--TODO: Add image to top of page-->
-<img src="assets/images/people-eating-1024x300.jpg" width="100%">
+  <img src="assets/images/people-eating-1024x300.jpg" width="100%">
 
   <!--TODO: NavBar Materialize-->
   <nav>
     <div class="nav-wrapper">
-      <a href="index.html" class="brand-logo">Feed Me</a>
+      <a href="Intro-Page.html" class="brand-logo">Feed Me</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       </ul>
     </div>
@@ -47,92 +47,90 @@
 
   <!--END TODO: NavBar-->
 
-<div style="display:flex; flex-direction:column; justify-content:space-evenly">
-  <!-- Mileage Dropdown Trigger -->
-  
-  <div id=zipBar class="">Location: Zip
+  <div style="display:flex; flex-direction:column; justify-content:space-evenly">
+    <!-- Mileage Dropdown Trigger -->
+
+    <div id=zipBar class="">Location: Zip
       <input style="width:100px!important" id="Zip" type="text" class="form-control" aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-sm"></div>
-<div class="">
+        aria-describedby="inputGroup-sizing-sm"></div>
+    <div class="">
 
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
+      <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
 
-  <!-- TODO: Mileage Dropdown Structure-Materialize -->
-  <ul id='dropdown1' class='dropdown-content'>
-      <li><a class="distance" href="#!" val2="Distance: 5 Miles" val='8046'>5 Miles</a></li>
-      <li><a class="distance" href="#!" val2="Distance: 10 Miles" val='16093'>10 Miles</a></li>
-      <li><a class="distance" href="#!" val2="Distance: 15 Miles " val='24140'>15 Miles</a></li>
-      <li><a class="distance" href="#!" val2="Distance: 20 Miles" val='32186'>20 Miles</a></li>
-      <li><a class="distance" href="#!" val2="Distance: 25 Miles" val='40000'>25 Miles</a></li>
-  </ul>
-  <p id="milesP">Distance: </p>
-  <!-- END TODO: mileage dropdown-->
+      <!-- TODO: Mileage Dropdown Structure-Materialize -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a class="distance" href="#!" val2="Distance: 5 Miles" val='8046'>5 Miles</a></li>
+        <li><a class="distance" href="#!" val2="Distance: 10 Miles" val='16093'>10 Miles</a></li>
+        <li><a class="distance" href="#!" val2="Distance: 15 Miles " val='24140'>15 Miles</a></li>
+        <li><a class="distance" href="#!" val2="Distance: 20 Miles" val='32186'>20 Miles</a></li>
+        <li><a class="distance" href="#!" val2="Distance: 25 Miles" val='40000'>25 Miles</a></li>
+      </ul>
+      <p id="milesP">Distance: </p>
+      <!-- END TODO: mileage dropdown-->
 
-  <!-- Price Dropdown Trigger -->
-  <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Price</a>
-  
-  <!-- TODO: Price Dropdown Structure -Materialize-->
-  <ul id='dropdown2' class='dropdown-content'>
-    <li><a href="#!" class="price" val2="Pricepoint: $" val="1">$</a></li>
-    <li><a href="#!" class="price" val2="Pricepoint: $$" val="2">$$</a></li>
-    <li><a href="#!" class="price" val2="Pricepoint: $$$" val="3">$$$</a></li>
-    <li><a href="#!" class="price" val2="Pricepoint: $$$$" val="4">$$$$</a></li>
-  </ul>
-  <p id="moneyP">Pricepoint: </p>
-  <!-- END TODO: price dropdown-->
-  <button type="button" class="btn btn-primary btn-lg" id="youDecide">Decide!</button>
-</div>
-  <!-- END TODO: Rating dropdown-->
+      <!-- Price Dropdown Trigger -->
+      <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Price</a>
 
-      <!-- ~~~~~~~~~~TODO: Temporary area for holding cards~~~~~~~~~~~~ -->
-      <div style="justify-content:space-between; display:flex; flex-wrap: wrap;" id="cardsBody">
+      <!-- TODO: Price Dropdown Structure -Materialize-->
+      <ul id='dropdown2' class='dropdown-content'>
+        <li><a href="#!" class="price" val2="Pricepoint: $" val="1">$</a></li>
+        <li><a href="#!" class="price" val2="Pricepoint: $$" val="2">$$</a></li>
+        <li><a href="#!" class="price" val2="Pricepoint: $$$" val="3">$$$</a></li>
+        <li><a href="#!" class="price" val2="Pricepoint: $$$$" val="4">$$$$</a></li>
+      </ul>
+      <p id="moneyP">Pricepoint: </p>
+      <!-- END TODO: price dropdown-->
+      <button type="button" class="btn btn-primary btn-lg" id="youDecide">Decide!</button>
+    </div>
+    <!-- END TODO: Rating dropdown-->
 
+    <!-- ~~~~~~~~~~TODO: Temporary area for holding cards~~~~~~~~~~~~ -->
+    <div style="justify-content:space-between; display:flex; flex-wrap: wrap;" id="cardsBody">
+
+    </div>
+
+
+    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
+
+
+    <!--Materialize-JavaScript at end of body for optimized loading-->
+
+    <!-- FOR JQUERY: -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- FOR MATERIALIZE CSS: -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- FOR PERSONAL JS: -->
+    <!-- Not minified JavaScript -->
+    <script src="assets/js/youDecide.js"></script>
+
+
+    <!--TODO: Bottom NavBar Materialize-->
+    <div>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Back To Top</a>
         </div>
-    
-    
-        <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
+      </nav>
+    </div>
+    <!--END TODO: Bottom NavBar-->
 
+    <!--TODO: CSS for bottom navbar and make it stick */-->
+    <style>
+      .nav-mobile2 {
+        background-color: #333;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
 
-  <!--Materialize-JavaScript at end of body for optimized loading-->
-
-  <!-- FOR JQUERY: -->
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-  <!-- FOR MATERIALIZE CSS: -->
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <!-- FOR PERSONAL JS: -->
-  <!-- Not minified JavaScript -->
-  <script src="assets/js/youDecide.js"></script>
-
-
- <!--TODO: Bottom NavBar Materialize-->
- <div><nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile2" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
-<!--END TODO: Bottom NavBar-->
-
-<!--TODO: CSS for bottom navbar and make it stick */-->
-<style>.nav-mobile2 {
-  background-color: #333;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}</style>
-
-<!--END TO DO-->
+    <!--END TO DO-->
 
 </body>
 
