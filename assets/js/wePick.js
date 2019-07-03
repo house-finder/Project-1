@@ -8,12 +8,7 @@ $(document).ready(function () {
     $("body").on("click", ".distance", function (event) {
         distance = $(this).attr('val');
         distancetext= $(this).attr('val2')
-<<<<<<< HEAD
         $('#milesP').text(distancetext)
-=======
-        $('#distanceP').text(distancetext)
-    
->>>>>>> origin/gh-pages
     });
 
     $("body").on("click", ".mapButton", function (event) {
