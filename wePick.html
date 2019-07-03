@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FeedMe-We Pick</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!--Materialize-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+
+   
+    <!-- FOR PERSONAL CSS: -->
+    <!-- Not minified CSS -->
+    <link rel="stylesheet" href="assets/css/wePick.css">
+</head>
+
+<body>
+    <!-- Adding Page title and directions for new user -->
+   
+
+    <!-- ~~~~~~~~~~END TODO: Adding Page title and directions for new user~~~~~~~~~~~~ -->
+
+<!--TODO: Add image to top of page-->
+<img src="assets/images/people-eating-1024x300.jpg" width="100%">
+
+    <!--TODO: NavBar Materialize-->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Feed Me!</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            </ul>
+        </div>
+    </nav>
+
+    <!--END TODO: NavBar-->
+
+    <!--Dropdown-->
+
+
+    <!-- ~~~~~~~~~~~~TODO: Location input with Zip/City~~~~~~~~~~~~~~ -->
+    <div class="row">
+        <div class="col s3"></div>
+        <div id=zipBar class="col s3">Location: Zip
+            <input style="width:50%!important" id="Zip" type="text" class="form-control"
+                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div>
+        <div class="col s3">
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
+            <ul id='dropdown1' class='dropdown-content'>'
+                <li><a class="distance" href="#!" val='8046'>5</a></li>
+                <li><a class="distance" href="#!" val='16093'>10</a></li>
+                <li><a class="distance" href="#!" val='24140'>15</a></li>
+                <li><a class="distance" href="#!" val='32186'>20</a></li>
+                <li><a class="distance" href="#!" val='40000'>25</a></li>
+
+            </ul>
+        </div>
+        <div class="col s3"></div>
+    </div>
+
+    <body>
+        <div class="container">
+            <!-- Page Content goes here -->
+        </div>
+    </body>
+
+    <!-- ~~~~~~~~~~~~TODO: We Decide/You Decide Button~~~~~~~~~~~~~~ -->
+    <div class="row">
+        <div class="col m6"><button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button></div>
+       <!--commenting out-JBwed<div class="col m6"><a href='youDecide.html' class="btn btn-success btn-lg" id="youDecide">You Decide</a>
+        </div> -->
+    </div>
+    <!-- <button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button>
+    <button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button> -->
+    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
+
+    <!-- ~~~~~~~~~~TODO: Temporary area for holding cards~~~~~~~~~~~~ -->
+    <div style="justify-content:center; display:flex" id="cardsBody">
+
+    </div>
+
+    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
+
+
+    <!-- FOR JQUERY: -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!-- FOR MATERIALIZE CSS: -->
+    <!-- Compiled and minified JavaScript -->
+
+    <!-- FOR PERSONAL JS: -->
+    <!-- Not minified JavaScript -->
+
+    <script src="assets/js/wePick.js"></script>
+
+
+
+</body>
+
+</html>
