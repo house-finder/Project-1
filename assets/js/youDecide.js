@@ -100,7 +100,7 @@ $("body").on("click", ".mapButton", function (event) {
                 cardAction.attr('class', 'card-action')
                 $(actualCard).append(cardAction)
 
-                var link = $('<a>')
+                var link = $('<button>')
                 link.attr('href', 'map.html')
                 link.text('Find on a map?')
                 link.attr('class', 'waves-effect waves-light btn mapButton')
