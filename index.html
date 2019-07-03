@@ -15,18 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!--Materialize Button
-    <a class="waves-effect waves-light btn">button</a>
-    <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-    <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>-->
-    <!--END TO DO button-->
 
     <!-- FOR PERSONAL CSS: -->
     <!-- Not minified CSS -->
     <link rel="stylesheet" href="assets/css/index.css">
-
 </head>
 
 <body>
@@ -38,6 +31,8 @@
     <nav>
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">Feed Me!</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            </ul>
         </div>
     </nav>
 
@@ -50,16 +45,17 @@
     <div class="row">
         <div class="col s3"></div>
         <div id=zipBar class="col s3">Location: Zip
-                <input id="Zip" type="text" class="form-control" aria-label="Sizing example input"
+                <input style="width:50%!important" id="Zip" type="text" class="form-control" aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm"></div>
         <div class="col s3">
-                <a style="color:black" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
-                <ul id='dropdown1' class='dropdown-content'>
-                        <li><a href="#!">5</a></li>
-                        <li><a href="#!">10</a></li>
-                        <li><a href="#!">15</a></li>
-                        <li><a href="#!">20</a></li>
-                        <li><a href="#!">25+</a></li>
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
+                <ul id='dropdown1' class='dropdown-content'>'
+                        <li><a class="distance" href="#!" val='8046'>5</a></li>
+                        <li><a class="distance" href="#!" val='16093'>10</a></li>
+                        <li><a class="distance" href="#!" val='24140'>15</a></li>
+                        <li><a class="distance" href="#!" val='32186'>20</a></li>
+                        <li><a class="distance" href="#!" val='40000'>25</a></li>
+
                     </ul>
         </div>
         <div class="col s3"></div>
@@ -74,16 +70,17 @@
     <!-- ~~~~~~~~~~~~TODO: We Decide/You Decide Button~~~~~~~~~~~~~~ -->
     <div class="row">
         <div class="col m6"><button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button></div>
-        <div class="col m6"><button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button>
+        <div class="col m6"><a href='youDecide.html' class="btn btn-success btn-lg" id="youDecide">You Decide</a>
         </div>
     </div>
     <!-- <button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button>
     <button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button> -->
-    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~
+    <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
 
 
     <!-- ~~~~~~~~~~TODO: Temporary area for holding cards~~~~~~~~~~~~ -->
-    <div class="d-flex flex-grow flex-direction-column flex-wrap justify-content-around bg-dark" id="cardsBody">
+    <div style="justify-content:center; display:flex" id="cardsBody">
+
     </div>
 
     <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
@@ -96,21 +93,19 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
     <script src="assets/js/dropdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
     <!-- FOR MATERIALIZE CSS: -->
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- FOR PERSONAL JS: -->
     <!-- Not minified JavaScript -->
+
     <script src="assets/js/index.js"></script>
 
-    <div id="map"></div>
 
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8gHovWgTSvaTup3gu9XGSa-4kyNws6uI&callback=initMap"
-        type="text/javascript"></script>
+
 </body>
 
 </html>
