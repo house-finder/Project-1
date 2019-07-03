@@ -1,7 +1,8 @@
  /* CSS FOR HOME PAGE HERE: */
- /* .nav-wrapper {
+ .nav-wrapper {
      background-color: gray;
- } */
+ }
+ 
  body {
      background-color: #e2e1dd;
  }
@@ -65,9 +66,9 @@
     margin-left: -50%;
     color: black;
  }
->>>>>>>>> Temporary merge branch 2
 
- <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2-->
+
+ /* <!--QUESTIONABLE-PM JULY1-JB-CSS for aligning dropdown on page2--> */
     .dropdown1 {
      left: auto;
      right: 0;
