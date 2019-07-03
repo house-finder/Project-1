@@ -33,6 +33,7 @@
 
 <body>
 
+
   <!--TODO: Add image to top of page-->
 <img src="assets/images/people-eating-1024x300.jpg" width="100%">
 
@@ -47,14 +48,25 @@
 
   <!--END TODO: NavBar-->
 
+ 
 <div style="display:flex; flex-direction:column; justify-content:space-evenly">
+  
+  <!--Instuctions for page-->
+  <p>
+    1) Enter your zip code </br>
+
+2) Pick how far you are wiling to go for food.</br>
+3) Pick how much you are willing to pay.</br>
+Based on that info, when you click the "Decide" button, we will show you  up to 20 restaurants based on your critera.</p>
+  
   <!-- Mileage Dropdown Trigger -->
   
-  <div id=zipBar class="">Location: Zip
+  <div style= "display: flex; flex-direction: row; justify-content: space-evenly; width: 100%">
+ <div id=zipBar class="">Location: Zip
       <input style="width:100px!important" id="Zip" type="text" class="form-control" aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-sm"></div>
-<div class="">
 
+<div>
   <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
 
   <!-- TODO: Mileage Dropdown Structure-Materialize -->
@@ -66,9 +78,11 @@
       <li><a class="distance" href="#!" val2="Distance: 25 Miles" val='40000'>25 Miles</a></li>
   </ul>
   <p id="milesP">Distance: </p>
+</div>
   <!-- END TODO: mileage dropdown-->
 
   <!-- Price Dropdown Trigger -->
+  <div>
   <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Price</a>
   
   <!-- TODO: Price Dropdown Structure -Materialize-->
@@ -79,8 +93,9 @@
     <li><a href="#!" class="price" val2="Pricepoint: $$$$" val="4">$$$$</a></li>
   </ul>
   <p id="moneyP">Pricepoint: </p>
+  </div></div>
   <!-- END TODO: price dropdown-->
-  <button type="button" class="btn btn-primary btn-lg" id="youDecide">Decide!</button>
+  <button style="width: 20%; align-self: center" type="button" class="btn btn-primary btn-lg" id="youDecide">Decide!</button>
 </div>
   <!-- END TODO: Rating dropdown-->
 

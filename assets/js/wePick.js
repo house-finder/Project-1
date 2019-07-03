@@ -7,7 +7,8 @@ $(document).ready(function () {
     var distance = "16093"
     $("body").on("click", ".distance", function (event) {
         distance = $(this).attr('val');
-        alert(distance);
+        var distancetext = $(this).attr('val2');
+        $('#distanceP').text(distancetext)
     });
 
     $("body").on("click", ".mapButton", function (event) {
