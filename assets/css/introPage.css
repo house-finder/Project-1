@@ -46,15 +46,8 @@
      height: 150px;
      margin: auto;
  }
- .row {
-     text-align: center;
-     padding-top: 25px;
- }
- .btn-primary {
-    background-color: yellow;
-    margin-left: 50%;
-    color: black;
- }
+
+
  .btn-success {
     background-color:rgb(202, 58, 58);
     margin-left: -50%;
