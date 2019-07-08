@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Maps</title>
     <style>
-            #map {
-                height:75%;
-                width:50%;
-                margin-top:5%;
-                margin-left:25%
-            }
-            html,
-            body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                overflow:hidden;
-                background-image: url(assets/images/people-eating-original.jpg);
-                background-size: 75%;
-            }
-            
-        </style>
+        #map {
+            height: 75%;
+            width: 50%;
+            margin-top: 5%;
+            margin-left: 25%
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url(assets/images/people-eating-original.jpg);
+            background-size: 75%;
+        }
+
+        .brand-logo {
+            text-decoration: none;
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
-        <div id="map"></div>
+    <div id="map"></div>
 
     <script>
         var map, infoWindow;
@@ -34,23 +41,33 @@
         var latnum = parseFloat(latitude)
         var longnum = parseFloat(longitude)
 
-// Initialize and add the map
-function initMap() {
+        // Initialize and add the map
+        function initMap() {
 
-  // The location of Uluru
-  var zipLat = {lat: latnum, lng: longnum};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 20, center: zipLat});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: zipLat, map: map});
-}
+            // The location of Uluru
+            var zipLat = { lat: latnum, lng: longnum };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 20, center: zipLat });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: zipLat, map: map });
+        }
 
 
-</script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8gHovWgTSvaTup3gu9XGSa-4kyNws6uI&callback=initMap">
     </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8gHovWgTSvaTup3gu9XGSa-4kyNws6uI&callback=initMap">
+        </script>
+
+
+
+    <div class="nav-wrapper">
+        <a href="Intro-Page.html" class="brand-logo"><strong>Back To Home</strong></a>
+    </div>
+
+
+
 
 </body>
+
 </html>

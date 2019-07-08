@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FeedMe-We Pick</title>
+    <title>Feed Me-We Pick</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
@@ -16,25 +16,25 @@
 
     <!-- Compiled and minified JavaScript -->
 
-   
+
     <!-- FOR PERSONAL CSS: -->
     <!-- Not minified CSS -->
-    <link rel="stylesheet" href="assets/css/wePick.css">
+    <link rel="stylesheet" href="assets/css/introPage.css">
 </head>
 
 <body>
     <!-- Adding Page title and directions for new user -->
-   
+
 
     <!-- ~~~~~~~~~~END TODO: Adding Page title and directions for new user~~~~~~~~~~~~ -->
 
-<!--TODO: Add image to top of page-->
-<img src="assets/images/people-eating-1024x300.jpg" width="100%">
+    <!--TODO: Add image to top of page-->
+    <img src="assets/images/people-eating-1024x300.jpg" width="100%">
 
     <!--TODO: NavBar Materialize-->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Feed Me!</a>
+            <a href="Intro-Page.html" class="brand-logo">Feed Me</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
             </ul>
         </div>
@@ -60,14 +60,14 @@
             <input style="width:50%!important" id="Zip" type="text" class="form-control"
                 aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></div>
         <div class="col s3">
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
-                <ul id='dropdown1' class='dropdown-content'>'
-                        <li><a class="distance" href="#!" val2="Distance: 5 Miles" val='8046'>5 Miles</a></li>
-                        <li><a class="distance" href="#!" val2="Distance: 10 Miles" val='16093'>10 Miles</a></li>
-                        <li><a class="distance" href="#!" val2="Distance: 15 Miles" val='24140'>15 Miles</a></li>
-                        <li><a class="distance" href="#!" val2="Distance: 20 Miles" val='32186'>20 Miles</a></li>
-                        <li><a class="distance" href="#!" val2="Distance: 25 Miles" val='40000'>25 Miles</a></li>
-                    </ul>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Distance (Miles)</a>
+            <ul id='dropdown1' class='dropdown-content'>'
+                <li><a class="distance" href="#!" val2="Distance: 5 Miles" val='8046'>5 Miles</a></li>
+                <li><a class="distance" href="#!" val2="Distance: 10 Miles" val='16093'>10 Miles</a></li>
+                <li><a class="distance" href="#!" val2="Distance: 15 Miles" val='24140'>15 Miles</a></li>
+                <li><a class="distance" href="#!" val2="Distance: 20 Miles" val='32186'>20 Miles</a></li>
+                <li><a class="distance" href="#!" val2="Distance: 25 Miles" val='40000'>25 Miles</a></li>
+            </ul>
         </div>
         <p id="distanceP">Distance:</p>
         <div class="col s3"></div>
@@ -76,15 +76,16 @@
     <body>
         <div class="container">
             <!-- Page Content goes here -->
+            <!-- ~~~~~~~~~~~~TODO: We Decide/You Decide Button~~~~~~~~~~~~~~ -->
+            <div style="display:flex; justify-content: center"class="row">
+                <div  class="col m6"><button style="justify-self: center" type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button>
+                </div>
+
+            </div>
         </div>
     </body>
 
-    <!-- ~~~~~~~~~~~~TODO: We Decide/You Decide Button~~~~~~~~~~~~~~ -->
-    <div class="row">
-        <div class="col m6"><button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button></div>
-       <!--commenting out-JBwed<div class="col m6"><a href='youDecide.html' class="btn btn-success btn-lg" id="youDecide">You Decide</a>
-        </div> -->
-    </div>
+
     <!-- <button type="button" class="btn btn-primary btn-lg" id="wePick">We Pick</button>
     <button type="button" class="btn btn-success btn-lg" id="youDecide">You Decide</button> -->
     <!-- ~~~~~~~~~~END TODO: We Decide/You Decide Button~~~~~~~~~~~~ -->
